@@ -1,0 +1,13 @@
+import { idb } from "../db";
+import g from "../util/g";
+import { bySport, isSport } from "../../common";
+import helpers from "../util/helpers";
+import { season } from "../core";
+
+//check if lost in first round
+async function check() {
+				// Confirm lost in first round
+	const t = await idb.getCopy.playoffSeries({
+		season: bbgm.g.get('season')
+	});
+        
